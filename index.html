@@ -11,8 +11,18 @@
         <h1>Weather App</h1>
     </div>
     <div class="inputContainer">
-        <input id="userInput" type="text" placeholder="Enter a Location"></input>
-        <button id="searchBtn" type="button">Search</button>
+        <input id="userInput" type="text" class="input" placeholder="Enter a Location"></input>
+        <button id="searchBtn" class="btn" type="button">
+            <strong>Search</strong>
+            <div id="container-stars">
+              <div id="stars"></div>
+            </div>
+          
+            <div id="glow">
+              <div class="circle"></div>
+              <div class="circle"></div>
+            </div>
+          </button>
     </div>
     <div id="weather_wrapper">
         <div class="weatherCard">
