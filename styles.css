@@ -2,58 +2,59 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css);
 
 * {
-    margin: 0;
+  margin: 0;
+  font-family:"Open Sans";
 }
 .header {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .input {
-    color: #8707ff;
-    border: 2px solid #8707ff;
-    border-radius: 10px;
-    padding: 10px 25px;
-    max-width: 190px;
-   }
-   .input:active {
-    box-shadow: 2px 2px 15px #8707ff inset;
-   }
-   
+  color: #8707ff;
+  border: 2px solid #8707ff;
+  border-radius: 10px;
+  padding: 10px 25px;
+  max-width: 190px;
+}
+.input:active {
+  box-shadow: 2px 2px 15px #8707ff inset;
+}
+
 .inputContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding-top: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-top: 69px;
 }
 .buttonContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    gap: 30px;
-    margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  gap: 30px;
+  margin: 30px;
 }
 .buttonContainer button {
-    width: 100px;
-    height: 40px;
+  width: 100px;
+  height: 40px;
 }
 body {
-  background: linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
+  background: linear-gradient(90deg, #7474bf 10%, #348ac7 90%);
 }
-#weather_wrapper{
+#weather_wrapper {
   width: 400px;
-  margin: 100px auto;
+  margin: 80px auto;
 }
-.weatherCard{
+.weatherCard {
   width: 400px;
   height: 200px;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   position: relative;
 }
-.currentTemp{
+.currentTemp {
   width: 220px;
   height: 200px;
   background: rgb(41, 41, 41);
@@ -61,7 +62,7 @@ body {
   top: 0;
   left: 0;
 }
-.currentWeather{
+.currentWeather {
   width: 180px;
   height: 200px;
   background: rgb(237, 237, 237);
@@ -70,7 +71,7 @@ body {
   top: 0;
   right: 0;
 }
-.temp{
+.temp {
   font-size: 80px;
   text-align: center;
   display: block;
@@ -78,7 +79,7 @@ body {
   color: rgb(255, 255, 255);
   padding: 20px 0 0;
 }
-.location{
+.location {
   color: rgb(255, 255, 255);
   text-align: center;
   text-transform: uppercase;
@@ -86,14 +87,14 @@ body {
   font-size: 30px;
   display: block;
 }
-.conditions{
+.conditions {
   font-family: weathericons;
   font-size: 80px;
   display: block;
   padding: 20px 0 0;
   text-align: center;
 }
-.info{
+.info {
   width: 180px;
   height: 50px;
   position: absolute;
@@ -111,9 +112,9 @@ body {
   word-spacing: 60px;
   top: 3px;
 }
-.rain::before{
+.rain::before {
   display: block;
-  content: '\f04e';
+  content: "\f04e";
   font-family: weathericons;
   font-size: 40px;
   left: 6px;
@@ -127,9 +128,9 @@ body {
   word-spacing: 60px;
   top: 3px;
 }
-.wind::before{
+.wind::before {
   display: block;
-  content: '\f050';
+  content: "\f050";
   font-family: weathericons;
   font-size: 25px;
   left: -10px;
@@ -137,170 +138,229 @@ body {
   top: 5px;
 }
 .btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 13rem;
-    overflow: hidden;
-    height: 3rem;
-    background-size: 300% 300%;
-    backdrop-filter: blur(1rem);
-    border-radius: 5rem;
-    transition: 0.5s;
-    animation: gradient_301 5s ease infinite;
-    border: double 4px transparent;
-    background-image: linear-gradient(#212121, #212121),  linear-gradient(137.48deg, #ffdb3b 10%,#FE53BB 45%, #8F51EA 67%, #0044ff 87%);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13rem;
+  overflow: hidden;
+  height: 3rem;
+  background-size: 300% 300%;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+  transition: 0.5s;
+  animation: gradient_301 5s ease infinite;
+  border: double 4px transparent;
+  background-image: linear-gradient(#212121, #212121),
+    linear-gradient(
+      137.48deg,
+      #ffdb3b 10%,
+      #fe53bb 45%,
+      #8f51ea 67%,
+      #0044ff 87%
+    );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+#container-stars {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+}
+
+strong {
+  z-index: 2;
+  font-family: "Avalors Personal Use";
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: #ffffff;
+  text-shadow: 0 0 4px white;
+}
+
+#glow {
+  position: absolute;
+  display: flex;
+  width: 12rem;
+}
+
+.circle {
+  width: 100%;
+  height: 30px;
+  filter: blur(2rem);
+  animation: pulse_3011 4s infinite;
+  z-index: -1;
+}
+
+.circle:nth-of-type(1) {
+  background: rgba(254, 83, 186, 0.636);
+}
+
+.circle:nth-of-type(2) {
+  background: rgba(142, 81, 234, 0.704);
+}
+
+.btn:hover #container-stars {
+  z-index: 1;
+  background-color: #212121;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.btn:active {
+  border: double 4px #fe53bb;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  animation: none;
+}
+
+.btn:active .circle {
+  background: #fe53bb;
+}
+
+#stars {
+  position: relative;
+  background: transparent;
+  width: 200rem;
+  height: 200rem;
+}
+
+#stars::after {
+  content: "";
+  position: absolute;
+  top: -10rem;
+  left: -100rem;
+  width: 100%;
+  height: 100%;
+  animation: animStarRotate 90s linear infinite;
+}
+
+#stars::after {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+}
+
+#stars::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 170%;
+  height: 500%;
+  animation: animStar 60s linear infinite;
+}
+
+#stars::before {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+  opacity: 0.5;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0);
   }
-  
-  #container-stars {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    transition: 0.5s;
-    backdrop-filter: blur(1rem);
-    border-radius: 5rem;
+
+  to {
+    transform: translateY(-135rem);
   }
-  
-  strong {
-    z-index: 2;
-    font-family: 'Avalors Personal Use';
-    font-size: 12px;
-    letter-spacing: 5px;
-    color: #FFFFFF;
-    text-shadow: 0 0 4px white;
+}
+
+@keyframes animStarRotate {
+  from {
+    transform: rotate(360deg);
   }
-  
-  #glow {
-    position: absolute;
-    display: flex;
-    width: 12rem;
+
+  to {
+    transform: rotate(0);
   }
-  
-  .circle {
-    width: 100%;
-    height: 30px;
-    filter: blur(2rem);
-    animation: pulse_3011 4s infinite;
-    z-index: -1;
+}
+
+@keyframes gradient_301 {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  .circle:nth-of-type(1) {
-    background: rgba(254, 83, 186, 0.636);
+
+  50% {
+    background-position: 100% 50%;
   }
-  
-  .circle:nth-of-type(2) {
-    background: rgba(142, 81, 234, 0.704);
+
+  100% {
+    background-position: 0% 50%;
   }
-  
-  .btn:hover #container-stars {
-    z-index: 1;
-    background-color: #212121;
+}
+
+@keyframes pulse_3011 {
+  0% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
   }
-  
-  .btn:hover {
-    transform: scale(1.1)
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
   }
-  
-  .btn:active {
-    border: double 4px #FE53BB;
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    animation: none;
+
+  100% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
-  
-  .btn:active .circle {
-    background: #FE53BB;
+}
+h1 {
+  background-image: linear-gradient(
+    -45deg,
+    #cc2b5e,
+    #555bed,
+    #ff0099,
+    #f56a4c
+  ) !important;
+  background-size: 400% !important;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: Gradient 6s ease infinite !important;
+  -moz-animation: Gradient 6s ease infinite !important;
+  animation: Gradient 6s ease infinite !important;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  #stars {
-    position: relative;
-    background: transparent;
-    width: 200rem;
-    height: 200rem;
+  50% {
+    background-position: 100% 50%;
   }
-  
-  #stars::after {
-    content: "";
-    position: absolute;
-    top: -10rem;
-    left: -100rem;
-    width: 100%;
-    height: 100%;
-    animation: animStarRotate 90s linear infinite;
+  100% {
+    background-position: 0% 50%;
   }
-  
-  #stars::after {
-    background-image: radial-gradient(#ffffff 1px, transparent 1%);
-    background-size: 50px 50px;
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  #stars::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -50%;
-    width: 170%;
-    height: 500%;
-    animation: animStar 60s linear infinite;
+  50% {
+    background-position: 100% 50%;
   }
-  
-  #stars::before {
-    background-image: radial-gradient(#ffffff 1px, transparent 1%);
-    background-size: 50px 50px;
-    opacity: 0.5;
+  100% {
+    background-position: 0% 50%;
   }
-  
-  @keyframes animStar {
-    from {
-      transform: translateY(0);
-    }
-  
-    to {
-      transform: translateY(-135rem);
-    }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  @keyframes animStarRotate {
-    from {
-      transform: rotate(360deg);
-    }
-  
-    to {
-      transform: rotate(0);
-    }
+  50% {
+    background-position: 100% 50%;
   }
-  
-  @keyframes gradient_301 {
-    0% {
-      background-position: 0% 50%;
-    }
-  
-    50% {
-      background-position: 100% 50%;
-    }
-  
-    100% {
-      background-position: 0% 50%;
-    }
+  100% {
+    background-position: 0% 50%;
   }
-  
-  @keyframes pulse_3011 {
-    0% {
-      transform: scale(0.75);
-      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-    }
-  
-    70% {
-      transform: scale(1);
-      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-    }
-  
-    100% {
-      transform: scale(0.75);
-      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    }
-  }
+}
