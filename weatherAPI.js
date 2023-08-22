@@ -6,6 +6,7 @@ const fetchData = async () => {
         city.innerHTML = data.location.name;
         wind.innerHTML = data.current.wind_mph + " MPH";
         precipitation.innerHTML = data.current.precip_mm + " MM";
+        // if (data.location.localtime)
         console.log(data);
     } catch {
         console.log("error fetching data")
